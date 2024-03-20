@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- <context:component-scan base-package="org.zerock.sample"></context:component-scan> -->
+	
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<!-- ? 로그 표시 설정전 -->
+		<!-- <property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="jdbcUrl"
+			value="jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="book_ex"></property>
+		<property name="password" value="book_ex"></property> -->
+		
+		<!-- ### ? 로그 표시 설정 후 -->
+		<property name="driverClassName"
+			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+		<property name="jdbcUrl"
+			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="book_ex"></property>
+		<property name="password" value="book_ex"></property>
+		
+	</bean>
+	
+	<!-- HikariCP configuration -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+	
+	<!-- 스프링에 SqlSessionFactory객체를 등록하는 작업 = SqlSessionFactoryBean 이용함.  -->
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+<!-- Mapper 설정 | (코딩전) NameSpaces 탭에서 Mybatis-spring 라이브러리 사용가능하도록 체크
+	= 지정된 패키지의 모든 Mybatis관련 어노테이션을 찾아 자동으로 처리 -->
+	<mybatis-spring:scan base-package="org.zerock.mapper" />
+	
+	<context:component-scan base-package="org.zerock.service" />
+
+</beans>

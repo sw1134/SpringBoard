@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper namespace 값은 (반드시) Mapper 인터페이스와 동일한 이름을 지정해야 함 -->
+<mapper namespace="org.zerock.mapper.BoardMapper">
+	<!-- select -->
+	<select id="getList" resultType="org.zerock.domain.BoardVO">
+	<![CDATA[
+		select * from tbl_board where bno > 0 order by bno desc
+	]]>
+	</select>
+	
+<!-- insert = 단순히 시퀀스의 다음값을 구해서 insert | #{컬럼명} = ?와 같음 = 입력받는 동적값 -->
+	<insert id="insert">
+		insert into tbl_board (bno, title, content, writer)
+		values (SEQ_BOARD.nextval, #{title}, #{content}, #{writer})	
+	</insert>
+	
+<!-- insertSelectKey() = @SelectKey 
+	= (주로) PK값을 미리(before) SQL을 통해 처리해두고 -> 특정한 이름으로 결과를 보관하는 방식.
+	= insert 할때 PK값을 사용할때 미리(Before)처리된 것의 결과를 이용함 -->
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="Long">
+			select seq_board.nextval from dual
+		</selectKey>
+		insert into tbl_board (bno, title, content, writer)
+		values (#{bno}, #{title}, #{content}, #{writer})
+	</insert>
+	
+<!-- read -->
+	<select id="read" resultType="org.zerock.domain.BoardVO">
+		select * from tbl_board where bno = #{bno}
+	</select>
+	
+<!-- delete -->
+	<delete id="delete">
+		delete from tbl_board where bno = #{bno}
+	</delete>
+	
+<!-- update -->
+	<update id="update">
+		update tbl_board 
+		set title = #{title},
+		content = #{content},
+		writer = #{writer},
+		updatedate = sysdate
+		where
+		bno = #{bno}
+	</update>
+	
+	
+</mapper>
