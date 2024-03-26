@@ -1,3 +1,4 @@
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
 # 게시판 시스템 설명 문서
 
 ## 목차
@@ -40,4 +41,5 @@
 - **페이징**: 대량의 게시물을 페이지별로 나누어 보여줍니다.
 - **댓글**: 사용자가 게시글에 댓글을 달 수 있는 기능을 제공합니다.
 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
 
