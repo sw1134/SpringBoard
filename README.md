@@ -45,6 +45,12 @@ Mapper를 통해 데이터베이스와 상호 작용하고,<br>
 - **댓글**: 사용자가 게시글에 댓글을 달 수 있는 기능을 제공합니다.
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=첫번째+줄+의+텍스트;두번째+줄+의+텍스트)](https://git.io/typing-svg)
-[![Typing SVG](# 게시판 시스템 설명 문서/?lines= 게시판+시스템+설명 문서;바로+고)](https://git.io/typing-svg)
+
+<details>
+<summary>
+  토글 제목
+</summary>
+   토글 안 내용
+</details>
 <img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
 
