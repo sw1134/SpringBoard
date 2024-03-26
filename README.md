@@ -54,7 +54,7 @@ Mapper를 통해 데이터베이스와 상호 작용하고,<br>
    <br>
   
  ![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) 
-![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)  ![spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![SQL_developer]([https://github.com/topics/oracle-sql-developer](https://camo.githubusercontent.com/541440af8ee3fc940c630f68fbbddf39a5e1a7130905939ee27d32797e2a419f/68747470733a2f2f696d672e69636f6e73382e636f6d2f65787465726e616c2d666c61742d6a756963792d666973682f36302f3030303030302f65787465726e616c2d73716c2d636f64696e672d616e642d646576656c6f706d656e742d666c61742d666c61742d6a756963792d666973682e706e67)https://camo.githubusercontent.com/541440af8ee3fc940c630f68fbbddf39a5e1a7130905939ee27d32797e2a419f/68747470733a2f2f696d672e69636f6e73382e636f6d2f65787465726e616c2d666c61742d6a756963792d666973682f36302f3030303030302f65787465726e616c2d73716c2d636f64696e672d616e642d646576656c6f706d656e742d666c61742d666c61742d6a756963792d666973682e706e67).
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)  ![spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![SQL_developer]([https://github.com/topics/oracle-sql-developer])
 
 </details>
 
