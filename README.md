@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=100&section=header" />
 # 게시판 시스템 설명 문서
 
 ## 목차
@@ -44,5 +44,5 @@ Mapper를 통해 데이터베이스와 상호 작용하고,<br>
 - **페이징**: 대량의 게시물을 페이지별로 나누어 보여줍니다.
 - **댓글**: 사용자가 게시글에 댓글을 달 수 있는 기능을 제공합니다.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=150&section=footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=BDBDC8&height=100&section=footer" />
 
